@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Time Products</title>
+</head>
+<body>
+    <h1>Lista de Productos en Tiempo Real</h1>
+    
+    <!-- Formulario para agregar un nuevo producto -->
+    <form id="productForm">
+        <input type="text" id="title" placeholder="Título del Producto" required />
+        <input type="text" id="description" placeholder="Descripción" required />
+        <input type="text" id="category" placeholder="Categoría" required />
+        <input type="number" id="price" placeholder="Precio" required />
+        <input type="number" id="stock" placeholder="Stock" required />
+        <button type="submit">Agregar Producto</button>
+    </form>
+
+    <hr>
+
+    <!-- Contenedor para los productos -->
+    <ul id="productosList"></ul>
+
+    <!-- Script para Socket.IO -->
+    <script src="https://cdn.socket.io/4.7.4/socket.io.min.js"></script>
+    <script src="/js/index.js"></script> <!-- Este es tu archivo de cliente para manejar websockets -->
+</body>
+</html>
